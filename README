@@ -1,0 +1,7 @@
+Image orientation / rotation via EXIF data is not handled.
+Instead of adding code to handle that, I found it much easier
+to pre-process the images using exiftran:
+
+$ for file in *.jpg; do exiftran -a -i $file; done
+
+This significantly reduces my workload and potential for error.
